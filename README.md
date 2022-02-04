@@ -6,9 +6,6 @@ Tested on Artix Linux, should work on Arch and its derivatives, and probably on 
 
 Also there is a variant (commented inside the promptme function) for having a dmenu prompt ask you if you want to update.
 
-
 Dependencies:
-
-wget
-
+wget\
 zcat
