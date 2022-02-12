@@ -42,7 +42,7 @@ case $Answer in
 esac
 }
 
-# if a new version is available, prompt me with dmenu
+# if a new version is available, prompt me
 if [[ "$SumNewVer" -gt "$SumCurVer" ]]; then
 	promptme
 else
