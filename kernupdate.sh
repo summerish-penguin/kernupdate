@@ -15,8 +15,8 @@ wget "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-$NewVer.tar.xz"
 tar -xvJf linux-$NewVer.tar.xz
 cd linux-$NewVer/
 make mrproper 
-zcat /proc/config.gz > .config 
-make -j4 
+zcat /proc/config.gz > .config
+make -j$(nproc)
 sudo make modules_install 
 sudo cp -v arch/x86_64/boot/bzImage /boot/vmlinuz-linux$SumNewVer 
 sudo mkinitcpio -k $NewVer -g /boot/initramfs-linux$SumNewVer.img 
